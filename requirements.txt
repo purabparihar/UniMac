@@ -1,4 +1,3 @@
-subprocess
 optparse
 termcolor
 re
