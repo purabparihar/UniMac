@@ -3,15 +3,14 @@
 ## Installation
 
 ```bash
-git clone https://github.com/purabparihar/UniMac.git
-cd UniMac
-pip3 install -r requirements.txt
+git clone https://github.com/purabparihar/UniMac-Mac-Address-Changer.git
+cd UniMac-Mac-Address-Changer
 ```
 
 
 ## Usage
 ```
-python unimac -i [Your_Interface] -m [Your New MAC Address]
+python UniMac -i [Your_Interface] -m [Your New MAC Address]
 ```
 ## Best of Luck
 
