@@ -1,7 +1,7 @@
 import subprocess   
 import optparse     #importing parser for CLI options
 import re    #importing regular expressions
-from termcolor import colored
+from termcolor import colored   #terminal color
 
 banner = ("""                        *
 
