@@ -1,6 +1,6 @@
-import subprocess
-import optparse
-import re
+import subprocess   
+import optparse     #importing parser for CLI options
+import re    #importing regular expressions
 from termcolor import colored
 
 banner = ("""                        *
@@ -40,12 +40,15 @@ def get_arguments():
     return options
 
 
+# Changing MAC address
 def change_mac(interface, newmac):
     print("[+] Changing MAC Address for", interface, "to", newmac)
     subprocess.call(["ifconfig", interface, "down"])
     subprocess.call(["ifconfig", interface, "hw", "ether", newmac])
     subprocess.call(["ifconfig", interface, "up"])
 
+    
+# Fetching current MAC address
 def get_current_mac(interface):
     ifconfig_result = subprocess.check_output(["ifconfig", interface])
     mac_verified = re.search(r"\w\w:\w\w:\w\w:\w\w:\w\w:\w\w", ifconfig_result)
